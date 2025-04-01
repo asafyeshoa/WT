@@ -7,6 +7,9 @@ const AppHeader: FC = () => {
       <h1 className={styles.title}>
         Meme Collectio<span className={styles.letterN}>n</span>
       </h1>
+      <div className={styles.imageWrapper}>
+        <img src="/favicon.svg" alt="Icon" className={styles.imageImage} />
+      </div>
     </header>
   );
 };
