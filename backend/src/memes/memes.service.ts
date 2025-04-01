@@ -1,8 +1,8 @@
-import { Injectable, OnModuleInit } from '@nestjs/common';
+import { Injectable, NotFoundException, OnModuleInit } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import axios from 'axios';
-import { Meme, ImgFlipApiResponse } from '../types/memes.types';
+import { Meme, ImgFlipApiResponse } from './memes.types';
 
 @Injectable()
 export class MemesService implements OnModuleInit {
@@ -28,10 +28,8 @@ export class MemesService implements OnModuleInit {
 
     try {
       await this.memeModel.insertMany(memesToSave, { ordered: false });
-      console.log(`Saved ${memesToSave.length} memes to MongoDB`);
     } catch (err: any) {
       if (err.writeErrors) {
-        console.log(`Skipped ${err.writeErrors.length} duplicate memes`);
       } else {
         console.error('Error inserting memes:', err);
       }
@@ -57,7 +55,7 @@ export class MemesService implements OnModuleInit {
       new: true,
     });
 
-    if (!updated) throw new Error('Meme not found');
+    if (!updated) throw new NotFoundException('Meme not found');
     return updated;
   }
 }

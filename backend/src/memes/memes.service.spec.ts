@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { MemesService } from './memes.service';
 import { getModelToken } from '@nestjs/mongoose';
-import { Meme } from '../types/memes.types';
+import { Meme } from './memes.types';
 import { Model } from 'mongoose';
 
 describe('MemesService', () => {

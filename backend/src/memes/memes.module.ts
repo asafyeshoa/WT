@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MemesController } from './memes.controller';
 import { MemesService } from './memes.service';
-import { MemeSchema } from '../schemas/memes.schema';
+import { MemeSchema } from './memes.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([{ name: 'Meme', schema: MemeSchema }])],
