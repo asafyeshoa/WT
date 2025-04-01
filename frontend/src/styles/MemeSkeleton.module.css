@@ -8,7 +8,7 @@
   justify-content: space-between;
   animation: pulse 1.5s infinite;
   width: 100%;
-  max-width: 250px;
+  height: 450px;
 }
 
 .image {
