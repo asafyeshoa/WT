@@ -1,0 +1,50 @@
+.loaderWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.loaderImage {
+  width: 64px;
+  height: 64px;
+  animation: pulse 1.5s infinite ease-in-out;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.loaderTitle {
+  font-size: 1.2rem;
+  animation: wave 2s infinite ease-in-out;
+  margin: 0;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0deg) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+  40% {
+    transform: translateY(4px) rotate(1deg);
+  }
+  60% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  80% {
+    transform: translateY(2px) rotate(1deg);
+  }
+}

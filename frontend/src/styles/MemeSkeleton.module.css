@@ -1,0 +1,43 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: pulse 1.5s infinite;
+  width: 100%;
+  max-width: 250px;
+}
+
+.image {
+  background-color: #e0e0e0;
+  height: 240px;
+}
+
+.textLine {
+  background-color: #d0d0d0;
+  height: 20px;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #c0c0c0;
+  height: 36px;
+  margin: 0 1rem 1rem;
+  border-radius: 6px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}

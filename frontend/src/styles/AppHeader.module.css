@@ -1,0 +1,56 @@
+.header {
+  background-color: #007bff;
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  display: inline-block;
+  animation: waveLetters 2s ease-in-out infinite;
+  position: relative;
+}
+
+.letterN {
+  display: inline-block;
+  animation: slideN 4s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes waveLetters {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes slideN {
+  0%,
+  70%,
+  100% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(100px);
+  }
+  90% {
+    transform: translateX(0);
+  }
+}
